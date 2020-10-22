@@ -1,0 +1,38 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoginPacketType.cs">
+    <Files>
+      <File FileName="Assets/TCP.cs" Line="57" Column="29" />
+      <File FileName="Assets/ConnectionServer.cs" Line="31" Column="42" />
+      <File FileName="Assets/IPacketHandlers.cs" Line="3" Column="34" />
+      <File FileName="Assets/BaseClient.cs" Line="1" Column="1" />
+      <File FileName="Assets/Packets.cs" Line="1" Column="1" />
+      <File FileName="Assets/LoginClient.cs" Line="2" Column="1" />
+      <File FileName="Assets/LoginClientSend.cs" Line="21" Column="10" />
+      <File FileName="Assets/BaseClientSend.cs" Line="1" Column="1" />
+      <File FileName="Assets/IClient.cs" Line="5" Column="30" />
+      <File FileName="Assets/ThreadManager.cs" Line="52" Column="2" />
+      <File FileName="Assets/LoginPacketType.cs" Line="10" Column="21" />
+      <File FileName="Assets/LoginClientHandler.cs" Line="19" Column="1" />
+      <File FileName="Assets/KartController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Packets.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
