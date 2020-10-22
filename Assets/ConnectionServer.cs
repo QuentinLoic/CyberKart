@@ -28,6 +28,7 @@ public class ConnectionServer : MonoBehaviour
         var packet = new Packet();
         var pos = controller.GetPosition();
         packet.Write(pos.x);
+        packet.Write(pos.y);
         client.GetTCP().SendData(packet);
     }
 
