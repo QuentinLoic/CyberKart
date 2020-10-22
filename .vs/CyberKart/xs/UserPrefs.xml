@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{6963F1C3-59EC-0BDA-A07F-A6B67A3109A4}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ConnectionServer.cs">
+    <Files>
+      <File FileName="Assets/KartController.cs" Line="20" Column="1" />
+      <File FileName="Assets/ConnectionServer.cs" Line="37" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CyberKart" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="ConnectionServer.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9e2079d6-b7bc-443e-a0dd-b618669f4a02" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
