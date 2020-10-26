@@ -1,15 +1,22 @@
 ﻿<Properties StartupConfiguration="{6963F1C3-59EC-0BDA-A07F-A6B67A3109A4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ConnectionServer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Client.cs">
     <Files>
-      <File FileName="Assets/KartController.cs" Line="20" Column="1" />
-      <File FileName="Assets/ConnectionServer.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/Packets.cs" Line="16" Column="21" />
+      <File FileName="Assets/Scripts/NethworkManager.cs" Line="46" Column="36" />
+      <File FileName="Assets/Scripts/Client.cs" Line="71" Column="27" />
+      <File FileName="Assets/Scripts/ThreadManager.cs" Line="12" Column="6" />
+      <File FileName="Assets/Scripts/ClientHandler.cs" Line="19" Column="6" />
+      <File FileName="Assets/Scripts/ClientSend.cs" Line="10" Column="6" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="24" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CyberKart" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="ConnectionServer.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Client.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -18,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9e2079d6-b7bc-443e-a0dd-b618669f4a02" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0cd662dc-541c-4a3c-945b-203cd77867c5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

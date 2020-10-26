@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoginPacketType.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/WebStream.cs">
     <Files>
-      <File FileName="Assets/LoginClientHandler.cs" IsPinned="True" />
-      <File FileName="Assets/TCP.cs" Line="57" Column="29" />
-      <File FileName="Assets/ConnectionServer.cs" Line="31" Column="29" />
+      <File FileName="Assets/LoginClientHandler.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/TCP.cs" />
+      <File FileName="Assets/ConnectionServer.cs" />
       <File FileName="Assets/IPacketHandlers.cs" />
       <File FileName="Assets/BaseClient.cs" />
       <File FileName="Assets/Packets.cs" />
@@ -11,22 +11,10 @@
       <File FileName="Assets/LoginClientSend.cs" />
       <File FileName="Assets/BaseClientSend.cs" />
       <File FileName="Assets/IClient.cs" />
-      <File FileName="Assets/LoginPacketType.cs" Line="10" Column="21" />
-      <File FileName="Assets/KartController.cs" Line="1" Column="1" />
+      <File FileName="Assets/LoginPacketType.cs" Line="18" Column="1" />
+      <File FileName="Assets/KartController.cs" Line="26" Column="1" />
+      <File FileName="Assets/WebStream.cs" Line="11" Column="24" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="LoginPacketType.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
