@@ -17,4 +17,12 @@ public class ClientHandle : MonoBehaviour
         // Now that we have the client's id, connect UDP
         Client.instance.udp.Connect(((IPEndPoint)Client.instance.tcp.socket.Client.LocalEndPoint).Port);
     }
+
+    public static void GetFrame(Packet packet)
+    {
+
+        var nbBytes = packet.ReadInt();
+        var bytes = packet.ReadBytes(nbBytes);
+        VideoManager.instance.ChangeImage(bytes);
+    }
 }

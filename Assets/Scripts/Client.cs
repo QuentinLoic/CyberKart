@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class Client : MonoBehaviour
 {
     public static Client instance;
-    public static int dataBufferSize = 1024;
+    public static int dataBufferSize = 100000;
 
     public string ip = "127.0.0.1";
     public int port = 8080;
@@ -106,7 +106,7 @@ public class Client : MonoBehaviour
             }
             catch (Exception _ex)
             {
-                Debug.Log($"Error sending data to server via TCP: {_ex}");
+                //Debug.Log($"Error sending data to server via TCP: {_ex}");
             }
         }
 
@@ -116,6 +116,7 @@ public class Client : MonoBehaviour
             try
             {
                 int _byteLength = stream.EndRead(_result);
+                
                 if (_byteLength <= 0)
                 {
                     instance.Disconnect();
@@ -124,7 +125,7 @@ public class Client : MonoBehaviour
 
                 byte[] _data = new byte[_byteLength];
                 Array.Copy(receiveBuffer, _data, _byteLength);
-
+                
                 receivedData.Reset(HandleData(_data)); // Reset receivedData if all data was handled
                 stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
             }
@@ -141,11 +142,12 @@ public class Client : MonoBehaviour
             int _packetLength = 0;
 
             receivedData.SetBytes(_data);
-
+            
             if (receivedData.UnreadLength() >= 4)
             {
                 // If client's received data contains a packet
                 _packetLength = receivedData.ReadInt();
+ 
                 if (_packetLength <= 0)
                 {
                     // If packet contains no data
@@ -157,12 +159,21 @@ public class Client : MonoBehaviour
             {
                 // While packet contains data AND packet data length doesn't exceed the length of the packet we're reading
                 byte[] _packetBytes = receivedData.ReadBytes(_packetLength);
+                
                 ThreadManager.ExecuteOnMainThread(() =>
                 {
                     using (Packet _packet = new Packet(_packetBytes))
                     {
                         int _packetId = _packet.ReadInt();
-                        packetHandlers[_packetId](_packet); // Call appropriate method to handle the packet
+                        try
+                        {
+                            packetHandlers[_packetId](_packet); // Call appropriate method to handle the packet
+                        }
+                        catch (Exception e)
+                        {
+                            Debug.Log($"Packet id {_packetId} does not exist");
+                        }
+                        
                     }
                 });
 
@@ -304,7 +315,8 @@ public class Client : MonoBehaviour
     {
         packetHandlers = new Dictionary<int, PacketHandler>()
         {
-            { (int)ServerPackets.welcome, ClientHandle.Welcome },
+            { (int)ServerPackets.Welcome, ClientHandle.Welcome },
+            { (int)ServerPackets.CameraImage, ClientHandle.GetFrame },
           
         };
         Debug.Log("Initialized packets.");

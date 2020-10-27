@@ -24,7 +24,7 @@ public class ClientSend : MonoBehaviour
     /// <summary>Lets the server know that the welcome message was received.</summary>
     public static void WelcomeReceived()
     {
-        using (Packet _packet = new Packet((int)ClientPackets.welcomeReceived))
+        using (Packet _packet = new Packet((int)ClientPackets.WelcomeReceived))
         {
             _packet.Write(Client.instance.myId);
             _packet.Write("Hello world");
@@ -37,10 +37,20 @@ public class ClientSend : MonoBehaviour
     /// <param name="_inputs"></param>
     public static void PlayerMovement(Vector2 _inputs)
     {
-        using (Packet _packet = new Packet((int)ClientPackets.playerMovement))
+        using (Packet _packet = new Packet((int)ClientPackets.PlayerMovement))
         {
             _packet.Write(_inputs);
            
+            SendTCPData(_packet);
+        }
+    }
+    
+    public static void LightControl()
+    {
+        
+        using (Packet _packet = new Packet((int)ClientPackets.LightControl))
+        {
+
             SendTCPData(_packet);
         }
     }

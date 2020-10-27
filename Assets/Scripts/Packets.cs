@@ -7,14 +7,16 @@ using UnityEngine;
 /// <summary>Sent from server to client.</summary>
 public enum ServerPackets
 {
-    welcome = 1,
+    Welcome = 1,
+    CameraImage= 2,
 }
 
 /// <summary>Sent from client to server.</summary>
 public enum ClientPackets
 {
-    welcomeReceived = 1, 
-    playerMovement
+    WelcomeReceived = 1, 
+    PlayerMovement,
+    LightControl
 }
 
 public class Packet : IDisposable
